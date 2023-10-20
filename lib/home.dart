@@ -1,4 +1,5 @@
 import 'package:facebook_clone/assets.dart';
+import 'package:facebook_clone/section/footerSection.dart';
 import 'package:facebook_clone/section/headerButtonSection.dart';
 import 'package:facebook_clone/section/postCardImageSection.dart';
 import 'package:facebook_clone/section/roomSection.dart';
@@ -56,7 +57,12 @@ class Home extends StatelessWidget {
               avatar: aquaman,
               name: "Aquaman",
               publishedTime: "4h",
+              blueTick: true,
+              postLike: "1k",
+              postComment: "50k",
+              postShare: "2k",
             ),
+            FooterButtonSection()
           ],
         ),
       ),

@@ -8,11 +8,13 @@ class PostCardHeader extends StatelessWidget {
     required this.avatar,
     required this.name,
     required this.publishedTime,
+    required this.blueTick,
   });
 
   final String avatar;
   final String name;
   final String publishedTime;
+  final bool blueTick;
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +27,7 @@ class PostCardHeader extends StatelessWidget {
             style: TextStyle(color: Colors.black),
           ),
           SizedBox(width: 10),
-          BlueTick()
+          blueTick ? BlueTick() : SizedBox()
         ],
       ),
       subtitle: Row(

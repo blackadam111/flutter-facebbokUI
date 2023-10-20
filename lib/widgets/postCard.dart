@@ -10,11 +10,19 @@ class PostCard extends StatelessWidget {
   final String avatar;
   final String name;
   final String publishedTime;
+  final bool blueTick;
+  final String postLike;
+  final String postComment;
+  final String postShare;
   const PostCard(
       {super.key,
       required this.avatar,
       required this.name,
-      required this.publishedTime});
+      required this.publishedTime,
+      this.blueTick = false,
+      required this.postLike,
+      required this.postComment,
+      required this.postShare});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +30,10 @@ class PostCard extends StatelessWidget {
       child: Column(
         children: [
           PostCardHeader(
-              avatar: avatar, name: name, publishedTime: publishedTime),
+              avatar: avatar,
+              name: name,
+              publishedTime: publishedTime,
+              blueTick: blueTick),
           titleSection(),
           PostCardImage(),
           Container(
@@ -42,19 +53,25 @@ class PostCard extends StatelessWidget {
                         size: 10,
                       ),
                     ),
-                    postText(label: '10k'),
+                    postText(label: postLike),
                   ],
                 ),
                 Container(
                   child: Row(
                     children: [
-                      postText(label: "1k"),
+                      postText(label: postComment),
                       SizedBox(width: 5),
-                      postText(label: "Comeents"),
+                      postText(label: "Comments"),
                       SizedBox(width: 10),
-                      postText(label: "500"),
+                      postText(label: postShare),
                       SizedBox(width: 5),
-                      postText(label: "Shares")
+                      postText(label: "Shares"),
+                      SizedBox(width: 10),
+                      Avatar(
+                          profilePhoto: batman,
+                          displayStatus: false,
+                          width: 20,
+                          height: 20)
                     ],
                   ),
                 )

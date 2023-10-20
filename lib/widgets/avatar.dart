@@ -4,11 +4,15 @@ class Avatar extends StatelessWidget {
   final String profilePhoto;
   final bool displayStatus;
   final bool displayBorder;
+  final double width;
+  final double height;
   const Avatar(
       {super.key,
       required this.profilePhoto,
       required this.displayStatus,
-      this.displayBorder = false});
+      this.displayBorder = false,
+      this.width = 50,
+      this.height = 50});
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +39,8 @@ class Avatar extends StatelessWidget {
             borderRadius: BorderRadius.circular(100),
             child: Image.asset(
               profilePhoto,
-              width: 50,
-              height: 50,
+              width: width,
+              height: height,
               fit: BoxFit.cover,
             )),
       ),
