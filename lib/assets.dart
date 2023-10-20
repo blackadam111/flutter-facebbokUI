@@ -1,0 +1,20 @@
+//Avatars
+
+String superman = "assets/avatars/superman.jpg";
+String batman = "assets/avatars/batman.jpg";
+String aquaman = "assets/avatars/aquaman.jpg";
+String flash = "assets/avatars/flash.jpg";
+String cyborg = "assets/avatars/cyborg.jpg";
+String wonderwoman = "assets/avatars/wonderwoman.jpg";
+String greenlantern = "assets/avatars/greenlantern.jpg";
+String martian = "assets/avatars/martianmanhunter.jpg";
+
+String post1 = "assets/posts/post1.jpg";
+String post2 = "assets/posts/post2.jpg";
+String post3 = "assets/posts/post3.jpg";
+String post4 = "assets/posts/post4.jpg";
+String post5 = "assets/posts/post5.jpg";
+String post6 = "assets/posts/post6.jpg";
+
+String aquamanpost = "assets/postphoto/aquaman.jpeg";
+String batmanpost = "assets/posts/doubleed.jpg";
