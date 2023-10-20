@@ -1,8 +1,11 @@
 import 'package:facebook_clone/assets.dart';
+import 'package:facebook_clone/section/footerSection.dart';
+import 'package:facebook_clone/section/headerButtonSection.dart';
 import 'package:facebook_clone/section/postCardHeader.dart';
 import 'package:facebook_clone/section/postCardImageSection.dart';
 import 'package:facebook_clone/widgets/avatar.dart';
 import 'package:facebook_clone/widgets/blueTick.dart';
+import 'package:facebook_clone/widgets/headerIconButton.dart';
 import 'package:facebook_clone/widgets/titleSection.dart';
 import 'package:flutter/material.dart';
 
@@ -37,6 +40,7 @@ class PostCard extends StatelessWidget {
           titleSection(),
           PostCardImage(),
           Container(
+            padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -76,6 +80,27 @@ class PostCard extends StatelessWidget {
                   ),
                 )
               ],
+            ),
+          ),
+          //FooterButtonSection()
+          HeaderButtonSection(
+            button1: HeaderIconButton(
+              iconsButton: Icons.thumb_up,
+              buttonAction: () => print("videocall"),
+              iconColor: Colors.grey,
+              iconText: "Like",
+            ),
+            button2: HeaderIconButton(
+              iconsButton: Icons.comment,
+              buttonAction: () => print("photo"),
+              iconColor: Colors.grey,
+              iconText: "Comment",
+            ),
+            button3: HeaderIconButton(
+              iconsButton: Icons.share,
+              buttonAction: () => print("room"),
+              iconColor: Colors.grey,
+              iconText: "share",
             ),
           )
         ],

@@ -2,7 +2,14 @@ import 'package:facebook_clone/widgets/headerIconButton.dart';
 import 'package:flutter/material.dart';
 
 class HeaderButtonSection extends StatelessWidget {
-  const HeaderButtonSection({super.key});
+  final Widget button1;
+  final Widget button2;
+  final Widget button3;
+  const HeaderButtonSection(
+      {super.key,
+      required this.button1,
+      required this.button2,
+      required this.button3});
 
   @override
   Widget build(BuildContext context) {
@@ -11,28 +18,7 @@ class HeaderButtonSection extends StatelessWidget {
       height: 40,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          HeaderIconButton(
-            iconsButton: Icons.video_call,
-            buttonAction: () => print("videocall"),
-            iconColor: Colors.red,
-            iconText: "Video",
-          ),
-          divider,
-          HeaderIconButton(
-            iconsButton: Icons.photo_library,
-            buttonAction: () => print("photo"),
-            iconColor: Colors.green,
-            iconText: "Photo",
-          ),
-          divider,
-          HeaderIconButton(
-            iconsButton: Icons.video_call,
-            buttonAction: () => print("room"),
-            iconColor: Colors.indigo,
-            iconText: "Room",
-          )
-        ],
+        children: [button1, divider, button2, divider, button3],
       ),
     );
   }
