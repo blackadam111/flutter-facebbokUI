@@ -1,5 +1,4 @@
 import 'package:facebook_clone/assets.dart';
-import 'package:facebook_clone/section/footerSection.dart';
 import 'package:facebook_clone/section/headerButtonSection.dart';
 import 'package:facebook_clone/section/postCardHeader.dart';
 import 'package:facebook_clone/section/postCardImageSection.dart';
@@ -17,6 +16,8 @@ class PostCard extends StatelessWidget {
   final String postLike;
   final String postComment;
   final String postShare;
+  final String postTitle;
+  final String postImage;
   const PostCard(
       {super.key,
       required this.avatar,
@@ -25,7 +26,9 @@ class PostCard extends StatelessWidget {
       this.blueTick = false,
       required this.postLike,
       required this.postComment,
-      required this.postShare});
+      required this.postShare,
+      required this.postTitle,
+      required this.postImage});
 
   @override
   Widget build(BuildContext context) {
@@ -37,8 +40,8 @@ class PostCard extends StatelessWidget {
               name: name,
               publishedTime: publishedTime,
               blueTick: blueTick),
-          titleSection(),
-          PostCardImage(),
+          titleSection(postTitle: postTitle),
+          PostCardImage(postImage: postImage),
           Container(
             padding: EdgeInsets.symmetric(horizontal: 5, vertical: 10),
             child: Row(
@@ -72,7 +75,7 @@ class PostCard extends StatelessWidget {
                       postText(label: "Shares"),
                       SizedBox(width: 10),
                       Avatar(
-                          profilePhoto: batman,
+                          profilePhoto: avatar,
                           displayStatus: false,
                           width: 20,
                           height: 20)
