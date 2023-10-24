@@ -26,5 +26,5 @@ String supermanpost = "assets/postphoto/henry.jpg";
 
 String darkseid = "assets/friends/darkseid.jpg";
 String deathstroke = "assets/friends/deathstroke.jpg";
-String stepenwolf = "assets/friends/dstepenwolf.jpg";
+String stepenwolf = "assets/friends/steppenwolf.jpg";
 String joker = "assets/friends/joker.png";

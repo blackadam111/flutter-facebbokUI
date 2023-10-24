@@ -1,4 +1,5 @@
 import 'package:facebook_clone/assets.dart';
+import 'package:facebook_clone/widgets/friendSuggest.dart';
 import 'package:flutter/material.dart';
 
 class SuggestionSection extends StatelessWidget {
@@ -7,7 +8,7 @@ class SuggestionSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 400,
+      height: 470,
       child: Column(
         children: [
           ListTile(
@@ -20,11 +21,38 @@ class SuggestionSection extends StatelessWidget {
                 )),
           ),
           Container(
-            height: 340,
+            height: 400,
             child: ListView(
               scrollDirection: Axis.horizontal,
               children: [
-                FriendSuggestion(),
+                FriendSuggestion(
+                  avatar: darkseid,
+                  name: "Darkseid",
+                  mutualFriend: "5 Mutual Friends",
+                  addFriend: () => print("add"),
+                  removefriend: () => print("remove"),
+                ),
+                FriendSuggestion(
+                  avatar: deathstroke,
+                  name: "Deathstroke",
+                  mutualFriend: "2 Mutual Friends",
+                  addFriend: () => print("add"),
+                  removefriend: () => print("remove"),
+                ),
+                FriendSuggestion(
+                  avatar: stepenwolf,
+                  name: "Steppenwolf",
+                  mutualFriend: "5 Mutual Friends",
+                  addFriend: () => print("add"),
+                  removefriend: () => print("remove"),
+                ),
+                FriendSuggestion(
+                  avatar: joker,
+                  name: "Joker",
+                  mutualFriend: "5 Mutual Friends",
+                  addFriend: () => print("add"),
+                  removefriend: () => print("remove"),
+                )
               ],
             ),
           )
